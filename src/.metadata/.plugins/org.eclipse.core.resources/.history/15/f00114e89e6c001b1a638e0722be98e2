@@ -1,0 +1,43 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+/*Escribir un programa que mientras el usuario cargue desde
+teclado un caracter letra minúscula, llame a un método
+que imprime por pantalla la tabla de multiplicar de 9. */
+
+public class practica3diseñodescendente {
+	public static void main(String[] args) {
+		boolean sigue=true;	
+		char caracter;
+		
+		while(sigue) {
+			caracter=pedirCaracter();
+			if(caracter<97&&caracter>122) {
+				sigue=false;
+				System.out.println("chau");
+				break;
+			}
+			tablaDelNueve();
+		}
+		
+	}
+	public static char pedirCaracter() {
+		
+		char caracter=0;
+		try {
+			
+		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("ingrese caracterA: ");
+		caracter=entrada.readLine().charAt(0);
+		}
+		catch (Exception exc){
+			System.out.println(exc);
+			}
+		return caracter;
+	}
+	public static void tablaDelNueve() {
+		for(int i=1; i<=10;i++) {
+			System.out.println(i*9);
+		
+		
+	}
+}

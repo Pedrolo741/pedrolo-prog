@@ -1,0 +1,20 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class practica3diseñodescendente {
+	public static void main(String[] args) {
+		/*Escribir un programa que mientras el usuario cargue desde
+teclado un caracter letra minúscula, llame a un método
+que imprime por pantalla la tabla de multiplicar de 9. */
+		
+	}
+	public int pedirNumero() {
+		int numero;
+		
+		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("ingrese numero: ");
+		numero = Integer.valueOf(entrada.readLine());
+
+		return numero;
+	}
+}
