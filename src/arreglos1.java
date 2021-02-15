@@ -1,0 +1,45 @@
+
+public class arreglos1 {
+/*Hacer un programa que dado un arreglo de enteros de tamaño 10 que se encuentra
+precargado, invierta el orden del contenido (por ejemplo: el que está en 0 se intercambia con
+el que está en 9, el que está en 1 con el que está en 8...). Este intercambio no se debe realizar
+de manera explícita, hay que hacer un método que incluya una iteración de intercambio.*/
+	public static int MAX=9;
+	public static void main(String[] args) {
+		//declarar arreglo 
+		int [] enteros = new int [MAX+1];
+		//Cargar arreglo
+		cargarArreglo(enteros);
+		System.out.println("   ");
+		//invertir arreglo
+		invertirArreglo(enteros);
+		
+		
+		
+		
+		
+		
+	}
+	private static void invertirArreglo(int[] enteros) {
+		
+		for(int pos=0;pos<5;pos++) {
+			int aux=enteros[pos];
+			enteros[pos]=enteros[MAX-pos];
+			enteros[MAX-pos]=aux;
+		}
+		for(int i=0;i<=MAX;i++) {
+			System.out.print(enteros[i]);
+		}
+	}
+	private static void cargarArreglo(int [] enteros) {
+		
+		for(int pos=0;pos<MAX;pos++) {
+			enteros[pos]=pos+1;
+		}
+		for(int i=0;i<=MAX;i++) {
+			System.out.print(enteros[i]);
+		}
+		
+	}
+	
+}
